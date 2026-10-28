@@ -24,10 +24,6 @@ const App = () => {
   };
 
   const searchMovies = async (query: string) => {
-    if (!query.trim().length) {
-      toast.error('Please enter your search query.');
-      return;
-    }
     try {
       setIsError(false);
       setIsLoading(true);
@@ -47,7 +43,7 @@ const App = () => {
       <Toaster position="top-center" reverseOrder={false} />
       <SearchBar onSubmit={searchMovies} />
       {movies.length > 0 && (
-        <MovieGrid movies={movies} onMovieClick={showSelectedMovie} />
+        <MovieGrid movies={movies} onSelect={showSelectedMovie} />
       )}
       {isError && <ErrorMessage />}
       {isLoading && <Loader />}
