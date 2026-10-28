@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import css from './App.module.css';
-import { fetchMovies } from '../../services/movieSearch';
+import { fetchMovies } from '../../services/movieService';
 import type { Movie } from '../../types/movie';
 import SearchBar from '../SearchBar/SearchBar';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
