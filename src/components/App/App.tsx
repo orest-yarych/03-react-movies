@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import css from './App.module.css';
 import { fetchMovies } from '../../services/movieSearch';
 import type { Movie } from '../../types/movie';
